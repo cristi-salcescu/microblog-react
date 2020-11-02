@@ -1,0 +1,1 @@
+json-server-auth db.json --watch db.json -p 3001 -r routes.json
