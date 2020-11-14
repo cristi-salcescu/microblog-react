@@ -1,4 +1,4 @@
-import { handleActions } from 'redux-actions';
+import { createReducer } from '@reduxjs/toolkit';
 import actions from './actions';
 
 const initialState = {
@@ -26,7 +26,7 @@ function hideServerError(state, action){
     };
 }
 
-export default handleActions({
+export default createReducer(initialState, {
     [actions.ShowServerError]: showServerError,
     [actions.HideServerError]: hideServerError,
-  }, initialState);
+  });

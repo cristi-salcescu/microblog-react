@@ -1,4 +1,4 @@
-import { createAction } from '../shared/redux-actions';
+import { createAction } from '../shared/redux-helper';
 
 const SetToken = createAction('SetToken');
 const SetUser = createAction('SetUser');

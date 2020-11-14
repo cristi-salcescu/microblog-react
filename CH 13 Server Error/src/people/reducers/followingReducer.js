@@ -1,4 +1,4 @@
-import { handleActions } from 'redux-actions';
+import { createReducer } from '@reduxjs/toolkit';
 import actions from '../actions';
 
 const initialState = [];
@@ -8,6 +8,6 @@ function setFollowingList(state, action){
     return list;
 }
 
-export default handleActions({
+export default createReducer(initialState, {
     [actions.SetFollowingList]: setFollowingList
-  }, initialState);
+  });

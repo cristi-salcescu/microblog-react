@@ -1,4 +1,4 @@
-import { handleActions } from 'redux-actions';
+import { createReducer } from '@reduxjs/toolkit';
 import actions from './actions';
 
 const initialState = {
@@ -30,8 +30,8 @@ function logout(){
     return initialState;
 }
 
-export default handleActions({
+export default createReducer(initialState, {
     [actions.SetToken]: setToken,
     [actions.SetUser]: setUser,
     [actions.Logout]: logout
-  }, initialState);
+  });

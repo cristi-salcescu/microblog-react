@@ -1,4 +1,4 @@
-import { createAction } from 'redux-actions';
+import { createAction } from '@reduxjs/toolkit';
 
 const SetPeople = createAction('SetPeople');
 const SetFollowingList = createAction('SetFollowingList');

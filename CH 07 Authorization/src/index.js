@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
 import App from './App';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
+import sessionStorage from './shared/sessionStorage';
 import rootReducer from './rootReducer';
 
-const store = createStore(
-    rootReducer,
-    composeWithDevTools(
-      applyMiddleware(thunk)
-    )
-  );
+const persistedState = sessionStorage.load();
+
+const store = configureStore({
+  reducer: rootReducer,
+  preloadedState: persistedState
+});
+
+store.subscribe(() => {
+  const state = store.getState();
+  sessionStorage.save(state);
+});
 
 ReactDOM.render(
   <React.StrictMode>

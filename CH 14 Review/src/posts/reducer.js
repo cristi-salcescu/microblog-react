@@ -1,13 +1,13 @@
-import { handleActions } from '../shared/redux-actions';
+import { createReducer } from '../shared/redux-helper';
 import actions from './actions';
 
-const state = []
+const initialState = []
 
 function setPosts(state, action){
     const posts = action.payload;
     return posts;
 }
 
-export default handleActions({
+export default createReducer(initialState, {
     [actions.SetPosts]: setPosts,
-  }, state);
+  });

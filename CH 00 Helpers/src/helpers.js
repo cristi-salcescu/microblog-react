@@ -12,7 +12,7 @@ function createAction(type){
     return actionCreator;
 }
 
-function handleActions(actionMap, initialState){
+function createReducer(initialState, actionMap){
     return function(state = initialState, action){
         const update = actionMap[action.type];
         
@@ -26,5 +26,5 @@ function handleActions(actionMap, initialState){
 
 export {
     createAction,
-    handleActions
+    createReducer
 }

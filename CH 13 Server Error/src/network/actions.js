@@ -1,4 +1,4 @@
-import { createAction } from 'redux-actions';
+import { createAction } from '@reduxjs/toolkit';
 
 const ShowServerError = createAction('SetServerError');
 const HideServerError = createAction('HideServerError');

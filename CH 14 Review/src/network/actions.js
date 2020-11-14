@@ -1,4 +1,4 @@
-import { createAction } from '../shared/redux-actions';
+import { createAction } from '../shared/redux-helper';
 
 const ShowServerError = createAction('SetServerError');
 const HideServerError = createAction('HideServerError');

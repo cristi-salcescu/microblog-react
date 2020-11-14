@@ -1,4 +1,4 @@
-import { createAction } from 'redux-actions';
+import { createAction } from '@reduxjs/toolkit';
 
 const SetToken = createAction('SetToken');
 const SetUser = createAction('SetUser');
