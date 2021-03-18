@@ -21,6 +21,6 @@ When creating the application you are going to encounter challenges like:
 
 [https://www.amazon.co.uk/dp/B08MD3DFY8](https://www.amazon.co.uk/dp/B08MD3DFY8)
 
-[https://www.amazon.es/dp/B08MD3DFY8](https://www.amazon.de/dp/B08MD3DFY8)
+[https://www.amazon.es/dp/B08MD3DFY8](https://www.amazon.es/dp/B08MD3DFY8)
 
-[https://www.amazon.fr/dp/B08MD3DFY8](https://www.amazon.de/dp/B08MD3DFY8)
+[https://www.amazon.fr/dp/B08MD3DFY8](https://www.amazon.fr/dp/B08MD3DFY8)
