@@ -31,20 +31,22 @@ function useFormState(initialValue){
 
   function validate(){
     const newState = {};
-    Object.keys(state).forEach(name => {
-        const input = state[name]
+    Object.entries(state).forEach(([name, input]) => {
         const error = validateInput(input, input.value);
+
         newState[name] = {
             ...input,
             error
         }
     });
+    
     setState(newState);
 
-    const hasErrors = Object
+    const isValid = Object
       .values(newState)
-      .find(input => input.error);
-    return !hasErrors;
+      .every(input => input.error === '');
+
+    return isValid;
   }
 
   function resetForm(){
